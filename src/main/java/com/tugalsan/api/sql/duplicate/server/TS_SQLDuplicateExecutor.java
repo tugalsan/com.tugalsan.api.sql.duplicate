@@ -49,7 +49,7 @@ public class TS_SQLDuplicateExecutor {
         return TS_SQLConnStmtUtils.fill(fillStmt, colNames.get(0), res.value0, offset);
     }
 
-    public int execute() {
+    public TS_SQLConnStmtUpdateResult execute() {
         return TS_SQLUpdateStmtUtils.update(anchor, toString(), fillStmt -> {
             var idx = set_fill(fillStmt, 0);
             where.fill(fillStmt, idx);
