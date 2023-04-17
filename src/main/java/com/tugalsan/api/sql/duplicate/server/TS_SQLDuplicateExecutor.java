@@ -45,11 +45,11 @@ public class TS_SQLDuplicateExecutor {
 
     private int set_fill(PreparedStatement fillStmt, int offset) {
         TGS_Pack1<Long> res = new TGS_Pack1(-1);
-        genId.execute(res);
+        genId.run(res);
         return TS_SQLConnStmtUtils.fill(fillStmt, colNames.get(0), res.value0, offset);
     }
 
-    public TS_SQLConnStmtUpdateResult execute() {
+    public TS_SQLConnStmtUpdateResult run() {
         return TS_SQLUpdateStmtUtils.update(anchor, toString(), fillStmt -> {
             var idx = set_fill(fillStmt, 0);
             where.fill(fillStmt, idx);

@@ -12,11 +12,11 @@ public class TS_SQLDuplicate {
 
     public TS_SQLConnStmtUpdateResult genIdNext() {
         executor.genId = new TS_SQLCellGenLngNext(executor, 0, executor.anchor, executor.tableName, executor.colNames);
-        return executor.execute();
+        return executor.run();
     }
 
     public TS_SQLConnStmtUpdateResult genIdNextDated() {
         executor.genId = new TS_SQLCellGenLngNextDated(executor, 0, executor.anchor, executor.tableName, executor.colNames);
-        return executor.execute();
+        return executor.run();
     }
 }
