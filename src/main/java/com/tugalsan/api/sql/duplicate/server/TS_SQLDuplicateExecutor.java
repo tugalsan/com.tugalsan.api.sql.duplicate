@@ -2,7 +2,7 @@ package com.tugalsan.api.sql.duplicate.server;
 
 import java.sql.*;
 import java.util.*;
-import com.tugalsan.api.pack.client.*;
+import com.tugalsan.api.tuple.client.*;
 import com.tugalsan.api.sql.cellgen.server.*;
 import com.tugalsan.api.sql.conn.server.*;
 import com.tugalsan.api.sql.sanitize.server.*;
@@ -44,7 +44,7 @@ public class TS_SQLDuplicateExecutor {
     }
 
     private int set_fill(PreparedStatement fillStmt, int offset) {
-        TGS_Pack1<Long> res = new TGS_Pack1(-1);
+        TGS_Tuple1<Long> res = new TGS_Tuple1(-1);
         genId.run(res);
         return TS_SQLConnStmtUtils.fill(fillStmt, colNames.get(0), res.value0, offset);
     }
