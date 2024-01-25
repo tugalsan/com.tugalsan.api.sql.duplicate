@@ -8,7 +8,7 @@ public class TS_SQLDuplicate {
     public TS_SQLDuplicate(TS_SQLConnAnchor anchor, CharSequence tableName, long id) {
         executor = new TS_SQLDuplicateExecutor(anchor, tableName, id);
     }
-    private TS_SQLDuplicateExecutor executor;
+    private final TS_SQLDuplicateExecutor executor;
 
     public TS_SQLConnStmtUpdateResult genIdNext() {
         executor.genId = new TS_SQLCellGenLngNext(executor, 0, executor.anchor, executor.tableName, executor.colNames);
