@@ -33,9 +33,9 @@ public class TS_SQLDuplicateExecutor {
     @Override
     public String toString() {
         TS_SQLSanitizeUtils.sanitize(tableName);
-        var colNamesLine = TGS_StringUtils.toString(colNames, ",");
-        var colNamesLineExceptId = TGS_StringUtils.toString(colNames, ",", 1);
-        return TGS_StringUtils.concat(
+        var colNamesLine = TGS_StringUtils.cmn().toString(colNames, ",");
+        var colNamesLineExceptId = TGS_StringUtils.cmn().toString(colNames, ",", 1);
+        return TGS_StringUtils.cmn().concat(
                 "INSERT INTO ", tableName, " (", colNamesLine, ")",
                 " SELECT ?, ", colNamesLineExceptId,
                 " FROM ", tableName,
