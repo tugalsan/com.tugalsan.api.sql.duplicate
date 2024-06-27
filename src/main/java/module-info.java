@@ -1,6 +1,6 @@
 module com.tugalsan.api.sql.duplicate {
     requires java.sql;
-    requires com.tugalsan.api.callable;
+    requires com.tugalsan.api.function;
     requires com.tugalsan.api.string;
     requires com.tugalsan.api.tuple;
     requires com.tugalsan.api.sql.cellgen;
