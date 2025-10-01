@@ -1,6 +1,6 @@
 package com.tugalsan.api.sql.duplicate.server;
 
-import com.tugalsan.api.sql.conn.server.*;
+import module com.tugalsan.api.sql.conn;
 
 public class TS_SQLDuplicateUtils {
 

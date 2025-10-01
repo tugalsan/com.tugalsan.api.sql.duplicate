@@ -1,14 +1,14 @@
 package com.tugalsan.api.sql.duplicate.server;
 
-import java.sql.*;
+import module com.tugalsan.api.tuple;
+import module com.tugalsan.api.sql.cellgen;
+import module com.tugalsan.api.sql.conn;
+import module com.tugalsan.api.sql.sanitize;
+import module com.tugalsan.api.sql.update;
+import module com.tugalsan.api.sql.where;
+import module com.tugalsan.api.string;
+import module java.sql;
 import java.util.*;
-import com.tugalsan.api.tuple.client.*;
-import com.tugalsan.api.sql.cellgen.server.*;
-import com.tugalsan.api.sql.conn.server.*;
-import com.tugalsan.api.sql.sanitize.server.*;
-import com.tugalsan.api.sql.update.server.*;
-import com.tugalsan.api.sql.where.server.*;
-import com.tugalsan.api.string.client.*;
 
 public class TS_SQLDuplicateExecutor {
 
